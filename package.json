@@ -6,5 +6,40 @@
   "repository": "https://github.com/Geebrox/react-g.git",
   "author": "geebrox",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "core-js": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.6.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-react": "^7.16.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "sass-mq": "^5.0.1",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
 }
