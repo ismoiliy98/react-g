@@ -1,0 +1,10 @@
+{
+  "name": "react-g",
+  "version": "1.0.0",
+  "description": "Simple and powerful boilerplate for react projects",
+  "main": "src/main.jsx",
+  "repository": "https://github.com/Geebrox/react-g.git",
+  "author": "geebrox",
+  "license": "MIT",
+  "private": false
+}
