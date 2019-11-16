@@ -24,7 +24,8 @@ const resolveEnvKeys = () => {
 
 const resolve = {
   alias: {
-    assets: PATHS.ASSETS_PATH
+    assets: PATHS.ASSETS_PATH,
+    utils: PATHS.UTILS_PATH
   },
   modules: ['src', 'node_modules'],
   extensions: ['.js', '.jsx', '.json', '.scss', '.css', '*']

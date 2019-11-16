@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import 'typeface-roboto'
+import 'utils/fonts'
 import styles from './App.scss'
 
 const App = () => {
