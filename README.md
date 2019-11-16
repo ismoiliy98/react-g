@@ -1,5 +1,9 @@
 # react-g
 
+Simple and powerful boilerplate for react projects
+
+![React-G](src/assets/img/react.gif)
+
 ## Getting started
 
 ```bash
