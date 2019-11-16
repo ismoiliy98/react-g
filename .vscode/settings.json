@@ -1,3 +1,15 @@
 {
-  "files.eol": "\n"
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/build": true,
+    "**/coverage": true
+  }
 }
