@@ -80,10 +80,10 @@ const optimization = {
     new TerserPlugin({
       parallel: true,
       cache: true,
-      sourceMap: true
+      sourceMap: false
     })
   ],
-  runtimeChunk: 'single',
+  runtimeChunk: 'multiple',
   splitChunks: {
     chunks: 'all',
     minSize: 30000,
