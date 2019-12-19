@@ -12,6 +12,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
+    "cy:cache": "cypress cache path && cypress cache list && cypress verify",
     "cy:dev": "yarn dev & wait-on http://localhost:8080",
     "cy:ci": "yarn cy:dev && yarn cy:run",
     "report:coverage": "nyc report --reporter=text && nyc report --reporter=text-summary"
