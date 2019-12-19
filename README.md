@@ -1,5 +1,7 @@
 # react-g
 
+[![CircleCI](https://circleci.com/gh/Geebrox/react-g.svg?style=svg)](https://circleci.com/gh/Geebrox/react-g)
+
 Simple and powerful boilerplate for react projects
 
 ![React-G](src/assets/img/react.gif)

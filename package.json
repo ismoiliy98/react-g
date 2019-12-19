@@ -12,8 +12,8 @@
     "build": "cross-env NODE_ENV=production webpack",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:dev": "dev & wait-on http://localhost:8080",
-    "cy:ci": "cy:dev && cy:run",
+    "cy:dev": "yarn dev & wait-on http://localhost:8080",
+    "cy:ci": "yarn cy:dev && yarn cy:run",
     "report:coverage": "nyc report --reporter=text && nyc report --reporter=text-summary"
   },
   "dependencies": {
