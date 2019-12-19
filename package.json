@@ -12,7 +12,9 @@
     "build": "cross-env NODE_ENV=production webpack",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "report:coverage": "yarn nyc --reporter=text && yarn nyc --reporter=text-summary"
+    "cy:dev": "dev & wait-on http://localhost:8080",
+    "cy:ci": "cy:dev && cy:run",
+    "report:coverage": "nyc report --reporter=text && nyc report --reporter=text-summary"
   },
   "dependencies": {
     "core-js": "^3.4.1",
@@ -58,6 +60,7 @@
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.2.1",
     "tinify-loader": "^0.2.4",
+    "wait-on": "^3.3.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
