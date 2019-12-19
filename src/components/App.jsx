@@ -10,7 +10,9 @@ const App = () => {
         <Helmet>
           <title>React-G</title>
         </Helmet>
-        <span className={styles.Greeting}>Welcome to React-G!</span>
+        <span data-test="greeting" className={styles.Greeting}>
+          Welcome to React-G!
+        </span>
       </div>
     </HelmetProvider>
   )

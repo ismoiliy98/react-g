@@ -115,7 +115,6 @@ const optimization = {
 }
 
 module.exports = {
-  mode: 'production',
   output,
   module: {
     rules

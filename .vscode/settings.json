@@ -10,6 +10,7 @@
     "**/*.log": true,
     "**/*.log*": true,
     "**/build": true,
-    "**/coverage": true
+    "**/coverage": true,
+    "**/.nyc*": true
   }
 }

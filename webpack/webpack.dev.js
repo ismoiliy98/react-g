@@ -37,7 +37,7 @@ const rules = [
 const devServer = {
   contentBase: PATHS.OUTPUT_PATH,
   compress: true,
-  port: 7777,
+  port: 8080,
   hot: true,
   open: true,
   overlay: {
@@ -47,7 +47,6 @@ const devServer = {
 }
 
 module.exports = {
-  mode: 'development',
   output,
   module: {
     rules

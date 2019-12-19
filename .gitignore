@@ -28,3 +28,10 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Test and coverage
+cypress/videos/
+cypress/screenshots/
+coverage/
+.nyc/
+.nyc_output/

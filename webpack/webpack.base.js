@@ -77,6 +77,7 @@ const plugins = [
 ]
 
 module.exports = {
+  mode: process.env.NODE_ENV || 'development',
   entry: PATHS.ENTRY_PATH,
   resolve,
   module: {
