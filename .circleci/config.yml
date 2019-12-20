@@ -54,7 +54,10 @@ workflows:
       - dependencies
       - test:
           requires:
-          - dependencies
+            - dependencies
       - build:
+          filters:
+            branches:
+              only: master
           requires:
             - test
