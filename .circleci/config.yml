@@ -3,6 +3,7 @@ jobs:
   dependencies:
     docker:
       - image: circleci/node:10
+    working_directory: ~/react-g
     steps:
       - checkout
       - restore_cache:
@@ -18,6 +19,7 @@ jobs:
   test:
     docker:
       - image: cypress/base:10
+    working_directory: ~/react-g
     steps:
       - checkout
       - restore_cache:
