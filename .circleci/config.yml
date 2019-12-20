@@ -9,21 +9,23 @@ jobs:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
+      - run: ls -la && pwd
       - run: yarn install
       - save_cache:
           paths:
-            - node_modules
+            - ./node_modules
             - /root/.cache/Cypress
           key: v2-dependencies-{{ checksum "package.json" }}
   test:
     docker:
       - image: cypress/base:10
     steps:
+      - checkout
       - restore_cache:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
-      - run: ls -la
+      - run: ls -la && pwd
       - run: yarn cy:cache
       - run: yarn cy:ci
       - run: yarn report:coverage
