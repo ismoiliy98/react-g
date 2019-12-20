@@ -24,6 +24,7 @@ jobs:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
+      - run: ls -la
       - run: yarn cy:cache
       - run: yarn cy:ci
       - run: yarn report:coverage
