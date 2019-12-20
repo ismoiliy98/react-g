@@ -70,4 +70,5 @@ workflows:
             branches:
               only: master
           requires:
-            - test
+            - test:cypress
+            - eslint
