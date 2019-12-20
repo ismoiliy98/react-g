@@ -17,8 +17,6 @@ jobs:
             - /root/.cache/Cypress
           key: v2-dependencies-{{ checksum "package.json" }}
   test:
-    requires:
-      - dependencies
     docker:
       - image: cypress/base:10
     steps:
@@ -42,4 +40,6 @@ workflows:
   react-g:
     jobs:
       - dependencies
-      - test
+      - test:
+          requires:
+          - dependencies
