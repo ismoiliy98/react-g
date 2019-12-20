@@ -36,7 +36,7 @@ jobs:
           keys:
             - dependencies-v1-{{ checksum "yarn.lock" }}
             - dependencies-v1-
-      - run: yarn build TINIFY_API_KEY_CI=$TINIFY_API_KEY
+      - run: yarn cross-env NODE_ENV=production TINIFY_API_KEY_CI=$TINIFY_API_KEY webpack
       - save_cache:
           paths:
             - node_modules
