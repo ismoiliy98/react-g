@@ -7,8 +7,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-            - dependencies-
+            - dependencies-v1-{{ checksum "yarn.lock" }}
+            - dependencies-v1-
       - run: yarn install
       - save_cache:
           paths:
@@ -22,8 +22,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-            - dependencies-
+            - dependencies-v1-{{ checksum "yarn.lock" }}
+            - dependencies-v1-
       - run: yarn cy:cache
       - run: yarn cy:ci
       - run: yarn report:coverage
