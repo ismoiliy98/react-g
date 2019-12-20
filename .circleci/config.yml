@@ -17,7 +17,6 @@ jobs:
             - /root/.cache/Cypress
           key: v2-dependencies-{{ checksum "package.json" }}
   test:
-    working_directory: ~/project
     docker:
       - image: cypress/base:10
     steps:
@@ -26,6 +25,7 @@ jobs:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
+      - run: cp ~/project/node_modules ./
       - run: ls -la && pwd
       - run: yarn cy:cache
       - run: yarn cy:ci
