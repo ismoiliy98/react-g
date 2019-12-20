@@ -35,3 +35,11 @@ jobs:
               - node_modules
               - /root/.cache/Cypress
             key: v2-dependencies-{{ checksum "package.json" }}
+
+workflows:
+  version: 2
+
+  react-g:
+    jobs:
+      - dependencies
+      - test
