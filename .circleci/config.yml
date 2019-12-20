@@ -34,15 +34,16 @@ jobs:
       - checkout
       - restore_cache:
           keys:
+            - build-dependencies-v1-{{ checksum "yarn.lock" }}
+            - build-dependencies-v1-
             - dependencies-v1-{{ checksum "yarn.lock" }}
             - dependencies-v1-
       - run: yarn cross-env NODE_ENV=production TINIFY_API_KEY_CI=$TINIFY_API_KEY webpack
       - save_cache:
           paths:
             - node_modules
-            - /root/.cache/Cypress
             - .cache
-          key: dependencies-v1-{{ checksum "yarn.lock" }}
+          key: build-dependencies-v1-{{ checksum "yarn.lock" }}
       - store_artifacts:
           path: build
           destination: build
