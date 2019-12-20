@@ -2,29 +2,31 @@ version: 2
 jobs:
   dependencies:
     docker:
-      - image: cypress/base:10
+      - image: circleci/node:10
+    working_directory: /home/react-g
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "yarn.lock" }}
-            - v2-dependencies-
+            - dependencies-{{ checksum "yarn.lock" }}
+            - dependencies-
       - run: ls -la && pwd
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
             - /root/.cache/Cypress
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
   test:
     docker:
       - image: cypress/base:10
+    working_directory: /home/react-g
     steps:
       - checkout
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "yarn.lock" }}
-            - v2-dependencies-
+            - dependencies-{{ checksum "yarn.lock" }}
+            - dependencies-
       - run: ls -la && pwd
       - run: yarn cy:cache
       - run: yarn cy:ci
