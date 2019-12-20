@@ -13,10 +13,11 @@ jobs:
       - run: yarn install
       - save_cache:
           paths:
-            - ./node_modules
+            - node_modules
             - /root/.cache/Cypress
           key: v2-dependencies-{{ checksum "package.json" }}
   test:
+    working_directory: ~/project
     docker:
       - image: cypress/base:10
     steps:
