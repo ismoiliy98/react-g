@@ -46,7 +46,7 @@ const rules = [
       {
         loader: 'tinify-loader',
         options: {
-          apikey: process.env.TINIFY_API_KEY
+          apikey: process.env.TINIFY_API_KEY_CI || process.env.TINIFY_API_KEY
         }
       }
     ]

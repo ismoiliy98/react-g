@@ -27,7 +27,25 @@ jobs:
       - run: yarn cy:cache
       - run: yarn cy:ci
       - run: yarn report:coverage
-
+  build:
+    docker:
+      - image: cypress/base:10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-v1-{{ checksum "yarn.lock" }}
+            - dependencies-v1-
+      - run: yarn build TINIFY_API_KEY_CI=$TINIFY_API_KEY
+      - save_cache:
+          paths:
+            - node_modules
+            - /root/.cache/Cypress
+            - .cache
+          key: dependencies-v1-{{ checksum "yarn.lock" }}
+      - store_artifacts:
+          path: build
+          destination: build
 workflows:
   version: 2
   build:
@@ -36,3 +54,6 @@ workflows:
       - test:
           requires:
           - dependencies
+      - build:
+          requires:
+            - test
