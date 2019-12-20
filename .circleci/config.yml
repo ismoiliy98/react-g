@@ -15,7 +15,7 @@ jobs:
             - node_modules
             - /root/.cache/Cypress
           key: dependencies-v1-{{ checksum "yarn.lock" }}
-  test:
+  test:cypress:
     docker:
       - image: cypress/base:10
     steps:
@@ -27,6 +27,16 @@ jobs:
       - run: yarn cy:cache
       - run: yarn cy:ci
       - run: yarn report:coverage
+  eslint:
+    docker:
+      - image: cypress/base:10
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-v1-{{ checksum "yarn.lock" }}
+            - dependencies-v1-
+      - run: yarn lint:es
   build:
     docker:
       - image: cypress/base:10
@@ -52,7 +62,7 @@ workflows:
   build:
     jobs:
       - dependencies
-      - test:
+      - test:cypress:
           requires:
             - dependencies
       - build:

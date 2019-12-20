@@ -16,8 +16,8 @@
     "cy:dev": "yarn dev & wait-on http://localhost:8080",
     "cy:ci": "yarn cy:dev && yarn cy:run",
     "report:coverage": "nyc report --reporter=text && nyc report --reporter=text-summary",
-    "lint": "eslint ./src/**/*.jsx",
-    "lint:fix": "eslint --fix ./src/**/*.jsx"
+    "lint:es": "eslint ./src/**/*.jsx",
+    "lint:fix:es": "eslint --fix ./src/**/*.jsx"
   },
   "husky": {
     "hooks": {
@@ -26,7 +26,7 @@
   },
   "lint-staged": {
     "*.(js|jsx)": [
-      "yarn lint:fix",
+      "yarn lint:fix:es",
       "git add"
     ]
   },
