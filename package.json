@@ -12,10 +12,10 @@
     "build": "cross-env NODE_ENV=production webpack",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:cache": "yarn cypress cache path && yarn cypress cache list && yarn cypress verify",
+    "cy:cache": "cypress cache path && cypress cache list && cypress verify",
     "cy:dev": "yarn dev & wait-on http://localhost:8080",
     "cy:ci": "yarn cy:dev && yarn cy:run",
-    "report:coverage": "yarn nyc report --reporter=text && nyc report --reporter=text-summary"
+    "report:coverage": "nyc report --reporter=text && nyc report --reporter=text-summary"
   },
   "dependencies": {
     "core-js": "^3.4.1",
