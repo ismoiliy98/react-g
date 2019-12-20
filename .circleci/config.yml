@@ -65,6 +65,9 @@ workflows:
       - test:cypress:
           requires:
             - dependencies
+      - eslint:
+          requires:
+            - dependencies
       - build:
           filters:
             branches:
