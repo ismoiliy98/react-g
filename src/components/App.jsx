@@ -1,19 +1,30 @@
 import React from 'react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import 'utils/fonts'
-import styles from './App.scss'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { appTheme } from 'utils/appTheme.js'
+import { CssBaseline, AppBar, Toolbar, Typography } from '@material-ui/core'
+import 'utils/fonts.js'
+import classes from './App.scss'
 
 const App = () => {
   return (
     <HelmetProvider>
-      <div className={styles.App}>
-        <Helmet>
-          <title>React-G</title>
-        </Helmet>
-        <span data-test="greeting" className={styles.Greeting}>
-          Welcome to React-G!
-        </span>
-      </div>
+      <CssBaseline />
+      <Helmet>
+        <title>React-G</title>
+      </Helmet>
+      <ThemeProvider theme={appTheme}>
+        <AppBar>
+          <Toolbar>
+            <Typography variant="h6">React-G</Typography>
+          </Toolbar>
+        </AppBar>
+        <div className={classes.App}>
+          <Typography variant="h3" align="center" data-test="greeting">
+            Welcome to React-G!
+          </Typography>
+        </div>
+      </ThemeProvider>
     </HelmetProvider>
   )
 }

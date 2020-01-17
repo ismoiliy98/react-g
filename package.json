@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.5.1",
     "core-js": "^3.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

@@ -1,30 +1,9 @@
-:global html,
-:global body,
-:global #root {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-
 .App {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 20px;
-  padding-top: calc(180px - 8vw);
-  box-sizing: border-box;
-  background-image: url('~assets/img/react.gif');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #01e4ad;
-
-  .Greeting {
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-  }
 }
