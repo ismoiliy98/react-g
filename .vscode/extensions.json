@@ -3,7 +3,9 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "mrmlnc.vscode-scss",
-    "eamodio.gitlens",
-    "dsznajder.es7-react-js-snippets"
+    "dsznajder.es7-react-js-snippets",
+    "bradlc.vscode-tailwindcss",
+    "davidanson.vscode-markdownlint",
+    "shd101wyy.markdown-preview-enhanced"
   ]
 }
