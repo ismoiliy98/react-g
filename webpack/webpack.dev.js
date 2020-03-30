@@ -11,12 +11,28 @@ const output = {
 const rules = [
   {
     test: /\.s?css$/,
+    exclude: /\.module\.s?css$/,
     use: [
       'style-loader',
       {
         loader: 'css-loader',
         options: {
           sourceMap: true,
+          localsConvention: 'camelCase'
+        }
+      },
+      'postcss-loader',
+      'sass-loader'
+    ]
+  },
+  {
+    test: /\.module\.s?css$/,
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: false,
           localsConvention: 'camelCase',
           modules: {
             localIdentName: '[local]_[hash:base64:5]'

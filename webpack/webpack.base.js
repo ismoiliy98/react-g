@@ -7,6 +7,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const resolveEnvKeys = () => {
   const envFiles = {
     development: PATHS.ROOT + '/.env.dev',
+    test: PATHS.ROOT + '/.env.dev',
     production: PATHS.ROOT + '/.env.prod'
   }
 

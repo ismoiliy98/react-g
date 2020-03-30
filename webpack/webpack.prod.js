@@ -12,6 +12,27 @@ const output = {
 const rules = [
   {
     test: /\.s?css$/,
+    exclude: /\.module\.s?css$/,
+    use: [
+      {
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          publicPath: '../'
+        }
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: true,
+          localsConvention: 'camelCase'
+        }
+      },
+      'postcss-loader',
+      'sass-loader'
+    ]
+  },
+  {
+    test: /\.module\.s?css$/,
     use: [
       {
         loader: MiniCssExtractPlugin.loader,
