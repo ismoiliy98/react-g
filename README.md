@@ -2,7 +2,7 @@
 
 Simple and powerful boilerplate for react projects
 
-![React-G](src/assets/img/react.gif)
+[![CircleCI](https://circleci.com/gh/Geebrox/react-g.svg?style=svg)](https://circleci.com/gh/Geebrox/react-g)
 
 ## Getting started
 
