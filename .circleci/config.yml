@@ -26,7 +26,7 @@ jobs:
             - dependencies-v1-
       - run: yarn cy:cache
       - run: yarn cy:ci
-      - run: yarn report:coverage
+      - run: yarn cy:report
   eslint:
     docker:
       - image: cypress/base:10

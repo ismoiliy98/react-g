@@ -4,6 +4,6 @@ describe('Test React-G', function() {
   })
 
   it('Contain greeting', () => {
-    cy.get('[data-test=greeting]').contains('Welcome to React-G')
+    cy.get('[data-test=greeting]').contains('Welcome to React-G!')
   })
 })

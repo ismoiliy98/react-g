@@ -7,6 +7,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const resolveEnvKeys = () => {
   const envFiles = {
     development: PATHS.ROOT + '/.env.dev',
+    test: PATHS.ROOT + '/.env.dev',
     production: PATHS.ROOT + '/.env.prod'
   }
 
@@ -76,8 +77,14 @@ const plugins = [
   })
 ]
 
+const mode = {
+  development: 'development',
+  test: 'development',
+  production: 'production'
+}
+
 module.exports = {
-  mode: process.env.NODE_ENV || 'development',
+  mode: mode[process.env.NODE_ENV || 'development'],
   entry: PATHS.ENTRY_PATH,
   resolve,
   module: {
