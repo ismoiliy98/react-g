@@ -36,7 +36,7 @@ jobs:
           keys:
             - dependencies-v1-{{ checksum "yarn.lock" }}
             - dependencies-v1-
-      - run: echo $(node -p "require('./package.json').version") && yarn lint:es
+      - run: yarn lint:es
   build:
     docker:
       - image: cypress/base:10
